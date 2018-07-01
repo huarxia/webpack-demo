@@ -38,8 +38,14 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
             },
             {
-                test: /\.(png|jpe?g|gif|bmp)$/,
-                use: ['file-loader']
+                test: /\.(png|jpe?g|gif|bmp|webp)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 8192 // 8K, 大于8K不转换为base64 小于就不转换使用路径模式
+                    }
+                }]
+                // filename: '[local].[hash:8].[ext]'
             }
         ]
     }
