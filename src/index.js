@@ -5,3 +5,4 @@ import m3 from './module3';
 m1();
 m2();
 m3();
+import './index.css';

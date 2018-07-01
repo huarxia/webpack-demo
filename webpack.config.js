@@ -28,5 +28,15 @@ module.exports = {
         open: true,
         port: 8888,
         contentBase: './dist'
+    },
+    module: {
+        rules: [
+            {
+                // 匹配css文件
+                test: /\.css$/,
+                // style-loader 将已经打包好的css插入html中
+                use: ['style-loader', 'css-loader']
+            }
+        ]
     }
 }
