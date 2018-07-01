@@ -5,7 +5,9 @@
 - `2.0.0` 使用webpack插件
 - `3.0.0` 使用webpack-dev-server插件
 - `4.0.0` 使用loader
-- `5.0.0` 使用file-loader
+- `5.0.0` 使用file-loader处理图片
+- `6.0.0` 使用url-loader处理图片
+- `7.0.0` 使用file-loader处理字体
 
 ### 命令体验
 

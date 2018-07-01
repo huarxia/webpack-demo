@@ -46,6 +46,10 @@ module.exports = {
                     }
                 }]
                 // filename: '[local].[hash:8].[ext]'
+            },
+            {
+                test: /\.(ttf|woff2?|eot|svg|otf)$/,
+                use: ['file-loader']
             }
         ]
     }
