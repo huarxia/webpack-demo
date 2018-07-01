@@ -6,6 +6,7 @@
 const path = require('path');
 // 自动创建html文件，并将打包js文件自动引入html中
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     // 入口
     entry: './src/index.js',
@@ -21,5 +22,11 @@ module.exports = {
             template: './src/index.html',
             inject: true
         })
-    ]
+    ],
+    // 把资源打包到内存，并且提供实时刷新页面
+    devServer: {
+        open: true,
+        port: 8888,
+        contentBase: './dist'
+    }
 }
