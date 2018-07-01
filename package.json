@@ -1,0 +1,23 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huarxia/webpack-demo.git"
+  },
+  "keywords": [],
+  "author": "huaxia@huar.love",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huarxia/webpack-demo/issues"
+  },
+  "homepage": "https://github.com/huarxia/webpack-demo#readme",
+  "devDependencies": {
+    "webpack": "^4.14.0"
+  }
+}
