@@ -36,6 +36,10 @@ module.exports = {
                 test: /\.css$/,
                 // style-loader 将已经打包好的css插入html中
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|jpe?g|gif|bmp)$/,
+                use: ['file-loader']
             }
         ]
     }
