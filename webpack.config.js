@@ -53,8 +53,27 @@ module.exports = {
                 // use: ['style-loader', 'css-loader']
                 use: extractCss.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader']
-                })
+                    use: [{
+                        loader: 'css-loader',
+                        options: {
+                            // 表示开启模块化
+                            module: true,
+                            localIdentName: '[local]-[hash:7]'
+                        }
+                    }]
+                }),
+                // include 表示包含
+                include: [path.resolve(__dirname, 'src/assets/css')]
+            },
+            {
+                // 匹配css文件, 不需要开启模块化
+                test: /\.css$/,
+                use: extractCss.extract({
+                    fallback: 'style-loader',
+                    use: 'css-loader'
+                }),
+                // include 表示包含
+                include: [path.resolve(__dirname, 'node_modules')]
             },
             {
                 test: /\.(png|jpe?g|gif|bmp|webp)$/,
