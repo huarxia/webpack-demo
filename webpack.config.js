@@ -8,6 +8,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // 清除打包目录
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+// 将css打包成文件而不是style插入文档中
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const extractCss = new ExtractTextWebpackPlugin({
+    filename: 'css/index.css'
+})
 module.exports = {
     // 入口
     entry: './src/assets/js/index.js',
@@ -18,13 +23,13 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: 'index.html',
+            filename: '../index.html',
             // 使用模板，将打包好的js加入进去
-            template: './src/index.html',
-            inject: true
+            template: './src/index.html'
         }),
         // 打包前删除旧的文件
-        new CleanWebpackPlugin(['dist'])
+        new CleanWebpackPlugin(['dist']),
+        extractCss
     ],
     // 把资源打包到内存，并且提供实时刷新页面
     devServer: {
@@ -38,13 +43,19 @@ module.exports = {
                 // 匹配css文件
                 test: /\.css$/,
                 // style-loader 将已经打包好的css插入html中
-                use: ['style-loader', 'css-loader']
+                // use: ['style-loader', 'css-loader']
+                use: extractCss.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader']
+                })
             },
             {
                 test: /\.(png|jpe?g|gif|bmp|webp)$/,
                 use: [{
                     loader: 'url-loader',
                     options: {
+                        // ext 表示文件后缀
+                        name: 'images/[name].[hash:8].[ext]',
                         limit: 8192 // 8K, 大于8K不转换为base64 小于就不转换使用路径模式
                     }
                 }]
@@ -52,7 +63,12 @@ module.exports = {
             },
             {
                 test: /\.(ttf|woff2?|eot|svg|otf)$/,
-                use: ['file-loader']
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: 'fonts/[name].[ext]'
+                    }
+                }]
             },
             {
                 test: /\.js$/,
