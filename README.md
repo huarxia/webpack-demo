@@ -35,3 +35,12 @@ devServer: {
 1. 服务启动时，`CleanWebpackPlugin`插件会删除打包的`dist`目录
 2. 服务启动时，`webpack-dev-server`会把资源打包到内存
 3. 为什么访问不到内存中的资源
+
+### 路径说明
+
+1. `output.path` 输出路径(可以打包到内存、也可以打包到硬盘)
+2. `output.publicPath` 资源的基础路径
+3. `devServer.publicPath` 服务器指向内存的虚拟路径
+4. `devServer.contentBase` 设置本地的目录(在内存中找不到的时候去内存中找)
+
+通常 `output.publicPath` 和 `devServer.publicPath` 要设置一样

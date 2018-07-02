@@ -19,7 +19,10 @@ module.exports = {
     // 输出目录及文件名字
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'assets/js/app.js'
+        filename: 'assets/js/app.js',
+        // 资源基础路径，设置XXX就会在原有路径前加上XXX
+        // 不是在打包输出文件加，而是资源在最终访问时加
+        publicPath: '/'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -38,7 +41,8 @@ module.exports = {
         // 服务启动的端口号
         port: 8888,
         // 控制访问的本地目录
-        contentBase: './'
+        contentBase: './',
+        publicPath: '/'
     },
     module: {
         rules: [
