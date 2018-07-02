@@ -5,5 +5,5 @@ body {
     width: 500px;
     height: 341px;
     border: 3px solid #000;
-    background: url(./images/img.jpg);
+    background: url(../images/img.jpg);
 }

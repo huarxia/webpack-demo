@@ -6,14 +6,15 @@
 const path = require('path');
 // 自动创建html文件，并将打包js文件自动引入html中
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+// 清除打包目录
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     // 入口
-    entry: './src/index.js',
+    entry: './src/assets/js/index.js',
     // 输出目录及文件名字
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'app.js'
+        path: path.resolve(__dirname, 'dist/assets'),
+        filename: 'js/app.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -21,7 +22,9 @@ module.exports = {
             // 使用模板，将打包好的js加入进去
             template: './src/index.html',
             inject: true
-        })
+        }),
+        // 打包前删除旧的文件
+        new CleanWebpackPlugin(['dist'])
     ],
     // 把资源打包到内存，并且提供实时刷新页面
     devServer: {
@@ -50,6 +53,12 @@ module.exports = {
             {
                 test: /\.(ttf|woff2?|eot|svg|otf)$/,
                 use: ['file-loader']
+            },
+            {
+                test: /\.js$/,
+                use: ['babel-loader'],
+                // webpack 排除 node_modules文件夹
+                exclude: path.resolve(__dirname, 'node_modules')
             }
         ]
     }

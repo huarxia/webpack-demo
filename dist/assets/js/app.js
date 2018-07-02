@@ -562,8 +562,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__module1__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__module2__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__module3__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_css__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__index_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__css_index_css__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__css_index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__css_index_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_font_awesome_css_font_awesome_min_css__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_font_awesome_css_font_awesome_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_font_awesome_css_font_awesome_min_css__);
 
@@ -576,6 +576,9 @@ Object(__WEBPACK_IMPORTED_MODULE_2__module3__["a" /* default */])();
 
 
 
+() => console.log('hello babel!!!');
+
+class Bael {}
 
 /***/ }),
 /* 4 */
@@ -587,7 +590,6 @@ function m1() {
     console.log('hello m1');
 }
 
-
 /***/ }),
 /* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -598,7 +600,6 @@ function m2() {
     console.log('hello m2');
 }
 
-
 /***/ }),
 /* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -608,7 +609,6 @@ function m2() {
 function m3() {
     console.log('hello m3');
 }
-
 
 /***/ }),
 /* 7 */
@@ -634,8 +634,8 @@ var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../node_modules/css-loader/index.js!./index.css", function() {
-		var newContent = require("!!../node_modules/css-loader/index.js!./index.css");
+	module.hot.accept("!!../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../node_modules/css-loader/index.js!./index.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
