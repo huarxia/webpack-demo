@@ -50,6 +50,12 @@ module.exports = {
             {
                 test: /\.(ttf|woff2?|eot|svg|otf)$/,
                 use: ['file-loader']
+            },
+            {
+                test: /\.js$/,
+                use: ['babel-loader'],
+                // webpack 排除 node_modules文件夹
+                exclude: path.resolve(__dirname, 'node_modules')
             }
         ]
     }

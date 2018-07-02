@@ -555,60 +555,88 @@ function updateLink (link, options, obj) {
 
 /***/ }),
 /* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__module1__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__module2__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__module3__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_css__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__index_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_font_awesome_css_font_awesome_min_css__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_font_awesome_css_font_awesome_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_font_awesome_css_font_awesome_min_css__);
 
 
+var _module = __webpack_require__(4);
+
+var _module2 = _interopRequireDefault(_module);
+
+var _module3 = __webpack_require__(5);
+
+var _module4 = _interopRequireDefault(_module3);
+
+var _module5 = __webpack_require__(6);
+
+var _module6 = _interopRequireDefault(_module5);
+
+__webpack_require__(7);
+
+__webpack_require__(11);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+(0, _module2.default)();
+(0, _module4.default)();
+(0, _module6.default)();
 
 
-Object(__WEBPACK_IMPORTED_MODULE_0__module1__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_1__module2__["a" /* default */])();
-Object(__WEBPACK_IMPORTED_MODULE_2__module3__["a" /* default */])();
+(function () {
+    return console.log('hello babel!!!');
+});
 
-
-
+var Bael = function Bael() {
+    _classCallCheck(this, Bael);
+};
 
 /***/ }),
 /* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = m1;
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = m1;
 function m1() {
     console.log('hello m1');
 }
 
-
 /***/ }),
 /* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = m2;
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = m2;
 function m2() {
     console.log('hello m2');
 }
 
-
 /***/ }),
 /* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = m3;
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = m3;
 function m3() {
     console.log('hello m3');
 }
-
 
 /***/ }),
 /* 7 */
