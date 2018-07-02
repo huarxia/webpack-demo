@@ -1,15 +1,21 @@
 # wenpack 3.0 入门体验代码
 
 ### tag
-- `1.0.0` 简单配置
-- `2.0.0` 使用webpack插件
-- `3.0.0` 使用webpack-dev-server插件
-- `4.0.0` 使用loader
-- `5.0.0` 使用file-loader处理图片
-- `6.0.0` 使用url-loader处理图片
-- `7.0.0` 使用file-loader处理字体
-- `8.0.0` webpack继承babel支持高阶语法
-- `9.0.0` 处理js打包路径问题以及使用CleanWebpackPlugin打包前清除打包目录
+- `1.0.0`  简单配置
+- `2.0.0`  使用webpack插件
+- `3.0.0`  使用webpack-dev-server插件
+- `4.0.0`  使用loader
+- `5.0.0`  使用file-loader处理图片
+- `6.0.0`  使用url-loader处理图片
+- `7.0.0`  使用file-loader处理字体
+- `8.0.0`  webpack继承babel支持高阶语法
+- `9.0.0`  处理js打包路径问题以及使用CleanWebpackPlugin打包前清除打包目录
+- `10.0.0` 分类打包静态资源到各自文件夹
+- `11.0.0` 统一处理打包路径
+- `12.0.0` 完善路径配置
+- `13.0.0` 使用css模块化
+
+[查看不同代码包](https://github.com/huarxia/webpack-demo/releases)
 
 ### 命令体验
 
