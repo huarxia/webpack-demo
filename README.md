@@ -19,3 +19,19 @@ npm run build
 # 本地启动webpack server
 npm start
 ```
+### 目录问题
+
+```
+devServer: {
+    // 当服务启动时，自动打开浏览器
+    open: true,
+    // 服务启动的端口号
+    port: 8888,
+    // 访问的本地目录
+    contentBase: './dist'
+}
+```
+
+1. 服务启动时，`CleanWebpackPlugin`插件会删除打包的`dist`目录
+2. 服务启动时，`webpack-dev-server`会把资源打包到内存
+3. 为什么访问不到内存中的资源

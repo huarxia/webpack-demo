@@ -11,19 +11,19 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 // 将css打包成文件而不是style插入文档中
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const extractCss = new ExtractTextWebpackPlugin({
-    filename: 'css/index.css'
+    filename: 'assets/css/index.css'
 })
 module.exports = {
     // 入口
     entry: './src/assets/js/index.js',
     // 输出目录及文件名字
     output: {
-        path: path.resolve(__dirname, 'dist/assets'),
-        filename: 'js/app.js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'assets/js/app.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: '../index.html',
+            filename: './index.html',
             // 使用模板，将打包好的js加入进去
             template: './src/index.html'
         }),
@@ -33,9 +33,12 @@ module.exports = {
     ],
     // 把资源打包到内存，并且提供实时刷新页面
     devServer: {
+        // 当服务启动时，自动打开浏览器
         open: true,
+        // 服务启动的端口号
         port: 8888,
-        contentBase: './dist'
+        // 控制访问的本地目录
+        contentBase: './'
     },
     module: {
         rules: [
@@ -55,7 +58,7 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         // ext 表示文件后缀
-                        name: 'images/[name].[hash:8].[ext]',
+                        name: 'assets/images/[name].[hash:8].[ext]',
                         limit: 8192 // 8K, 大于8K不转换为base64 小于就不转换使用路径模式
                     }
                 }]
@@ -66,7 +69,7 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: 'fonts/[name].[ext]'
+                        name: 'assets/fonts/[name].[ext]'
                     }
                 }]
             },
